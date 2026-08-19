@@ -1,0 +1,14 @@
+{
+  "name": "webtest-app",
+  "version": "1.0.0",
+  "description": "Automated website testing tool - health, accessibility, performance, and visual checks from a URL",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "playwright": "^1.47.0",
+    "axe-core": "^4.10.0"
+  }
+}

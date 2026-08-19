@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Site Check — automated website testing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scanlines"></div>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      SITE CHECK
+    </div>
+    <div class="brand-sub">automated inspection for any URL</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="addressbar" id="addressbar">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <span class="protocol">https://</span>
+        <input id="urlInput" type="text" placeholder="yoursite.com" autocomplete="off" />
+        <button id="runBtn">Run check</button>
+      </div>
+      <p class="hero-caption">Enter a URL. We'll load it in a real browser, check its health, scan accessibility, capture screenshots across devices, and measure load performance.</p>
+    </section>
+
+    <section id="statusLine" class="status-line hidden"></section>
+
+    <section id="results" class="results hidden">
+
+      <div class="grid-summary" id="summaryCards"></div>
+
+      <div class="panel">
+        <h2><span class="idx">01</span> Health</h2>
+        <div id="healthBody" class="panel-body"></div>
+      </div>
+
+      <div class="panel">
+        <h2><span class="idx">02</span> Accessibility</h2>
+        <div id="a11yBody" class="panel-body"></div>
+      </div>
+
+      <div class="panel">
+        <h2><span class="idx">03</span> Performance</h2>
+        <div id="perfBody" class="panel-body"></div>
+      </div>
+
+      <div class="panel">
+        <h2><span class="idx">04</span> Visual — across devices</h2>
+        <div id="visualBody" class="panel-body shots"></div>
+      </div>
+
+      <button id="downloadBtn" class="download-btn">Download full report (.html)</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
